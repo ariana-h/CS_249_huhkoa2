@@ -19,6 +19,9 @@ public class FoodRationer {
         int days = (int)(totalFood/foodPerDay); //casting
 
         System.out.println("Days left: " + days);
+
+        input.close(); //don't need for scanner - but def need for files
+
     }
     
 }
