@@ -5,17 +5,24 @@ import edu.huhkoa2.Exercises_09.Matrix2D;
 public class Circle {
     private double radius = 1.0; //default will be 0.0 if not assigned a value
     private Matrix2D pos = Matrix2D.makePoint2D(0,0);
+    //private static final double DEFAULT_RADIUS = 1.0;
+    //private static final Matrix2D DEFAULT_POS = Matrix2D.makePoint2D(0,0);
+
 
     public Circle(){
         //Do nothing
     }
 
     public Circle(double radius){
-        setRadius(radius);
+        //setRadius(radius);
+        this(radius, Matrix2D.makePoint2D(0,0));
+        //this(radius, DEFAULT_POS);
     }
 
     public Circle(Matrix2D pos){
-        setCenter(pos);
+        //setCenter(pos);
+        this(1.0, pos);
+        //this(DEFAULT_RADIUS, pos);
     }
 
     public Circle(double radius, Matrix2D pos){
