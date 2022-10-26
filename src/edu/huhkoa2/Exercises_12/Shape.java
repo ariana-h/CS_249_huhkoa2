@@ -3,7 +3,7 @@ package edu.huhkoa2.Exercises_12;
 import edu.huhkoa2.Exercises_09.Matrix2D;
 
 public class Shape {
-    private boolean filled;
+    protected boolean filled = false;
     private Matrix2D center = Matrix2D.makePoint2D(0,0);
 
     public Shape(){
@@ -31,4 +31,17 @@ public class Shape {
         this.center = new Matrix2D(center);
     }
     
+    public String toString(){
+        String s = "Shape at ";
+        s+= center.toCoordString();
+        s+= ", ";
+        if(filled){
+            s+= "filled";
+        }
+        else{
+            s+= "empty";
+        }
+        return s;
+    }
+
 }
