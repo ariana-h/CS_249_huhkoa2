@@ -6,12 +6,9 @@ public class Letterhead {
     private char boundaryChar;
 
     public Letterhead(String name, String [] sloganLines, char boundaryChar){
-        this.name = name;
-        slogan = new String [sloganLines.length];
-        for(int i = 0; i < sloganLines.length; i++){
-            slogan[i] = sloganLines[i];
-        }
-        this.boundaryChar = boundaryChar;
+        setName(name);
+        setSlogan(sloganLines);
+        setBoundaryChar(boundaryChar);
     }
 
     public String getName(){
@@ -49,24 +46,33 @@ public class Letterhead {
     public String toString(){
         StringBuilder sb = new StringBuilder();
         String empty = "";
+        //Row of boundary characters
         for(int i = 0; i < 40; i++){
             sb.append(boundaryChar);
         }
 
-        sb.append("\n" + boundaryChar + " " + name + padSpaces(name.length()) 
-                  + boundaryChar + "\n" + boundaryChar + " " + padSpaces(empty.length()) 
+        //Business name
+        sb.append("\n" + boundaryChar + " " 
+                  + name + padSpaces(name.length()) 
+                  + boundaryChar + "\n" + boundaryChar 
+                  + " " + padSpaces(empty.length()) 
                   + boundaryChar + "\n");
 
+        //Slogan name
         for(int i = 0; i < slogan.length; i++){
-            sb.append(boundaryChar + " " + slogan[i] + padSpaces(slogan[i].length()) 
+            sb.append(boundaryChar + " " + slogan[i] 
+                      + padSpaces(slogan[i].length()) 
                       + boundaryChar + "\n");
         }
         
-        for(int i = 0; (i + slogan.length) < 4; i++){
-            sb.append(boundaryChar + " " + padSpaces(empty.length()) + boundaryChar + "\n");
+        //Padding empty lines
+        int padLines = 4 - slogan.length;
+        for(int i = 0; i < padLines; i++){
+            sb.append(boundaryChar + " " + padSpaces(empty.length()) 
+                      + boundaryChar + "\n");
         }
 
-
+        //Row of boundary characters
         for(int i = 0; i < 40; i++){
             sb.append(boundaryChar);
         }
