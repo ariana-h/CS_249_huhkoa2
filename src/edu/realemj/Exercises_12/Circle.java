@@ -6,7 +6,7 @@ public class Circle extends Shape {
     private double radius = 1.0;
 
     public Circle() {        
-        // IMPLICIT: super()
+        // IMPLICIT: super()        
     }
 
     public Circle(double radius) {
@@ -26,7 +26,7 @@ public class Circle extends Shape {
         //this.radius = radius;
         //this.filled = filled;
         //setCenter(center);
-        setRadius(radius);
+        setRadius(radius);       
     }
 
     public double getRadius() { return radius; }
