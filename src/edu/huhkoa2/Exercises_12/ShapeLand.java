@@ -19,5 +19,55 @@ public class ShapeLand {
         System.out.println(c);
         System.out.println(c2);
         System.out.println(c3);
+
+        System.out.println(Shape.getNameOfShape());   //getNameOfShape is not overridden bc its static
+        System.out.println(Circle.getNameOfShape());
+
+        Shape sReallyC = new Circle(5.6);   //example of polymorphism
+        Shape sReallyR = new Rectangle(3,9);
+
+        System.out.println(sReallyC);   
+        System.out.println(sReallyR);
+
+        Shape [] myShapes = new Shape[4];
+        myShapes[0] = s;
+        myShapes[1] = sReallyC;
+        myShapes[2] = sReallyR;
+        myShapes[3] = new Square(9);
+
+        System.out.println("My shapes: ");
+        for(Shape t: myShapes){
+            System.out.println(t);
+            printArea(t);
+        }
+        Circle masterC = new Circle(5.7, true, Matrix2D.makePoint2D(1,2));
+        Circle otherC = new Circle(5.7, true, Matrix2D.makePoint2D(1,2));
+        Circle diffRad = new Circle(9.1, true, Matrix2D.makePoint2D(1,2));
+        Circle diffFilled = new Circle(5.7, false, Matrix2D.makePoint2D(1,2));
+        Circle diffCenter = new Circle(5.7, true, Matrix2D.makePoint2D(3,4));
+
+        System.out.println(masterC.equals(s));
+        System.out.println(masterC.equals(otherC));
+        System.out.println(masterC.equals(diffRad));
+        System.out.println(masterC.equals(diffFilled));
+        System.out.println(masterC.equals(diffCenter));
+
     }
+
+    public static void printShape(Shape s){
+        System.out.println("MY GLORIOUS SHAPE: " + s);
+    }
+
+    public static void printArea(Shape s){
+        System.out.println("Area = " + s.getArea());
+
+        if(s instanceof Circle){
+            //downcasting
+            Circle c = (Circle)s;
+            System.out.println("* radius = " + c.getRadius());
+            System.out.println("* radius = " + ((Circle)s).getRadius());
+        }
+        
+    }
+
 }

@@ -44,4 +44,21 @@ public class Shape {
         return s;
     }
 
+    public static String getNameOfShape(){
+        return "Generic Shape";
+    }
+
+    public double getArea(){
+        return 0;
+    }
+
+    public boolean equals(Object other){
+        boolean isEqual = false;
+        if(other instanceof Shape os){
+            if(filled == os.filled && center.equals(os.center)){
+                isEqual = true;
+            }
+        }
+        return isEqual;
+    }
 }
