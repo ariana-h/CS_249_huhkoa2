@@ -114,4 +114,28 @@ public class Matrix2D {
         m.setValue(1, 2, yoff);
         return m;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        boolean isEqual = false;
+        if(other instanceof Matrix2D mo) {
+            if(getRowCnt() == mo.getRowCnt() &&
+                getColCnt() == mo.getColCnt()) {
+
+                boolean valuesSame = true;
+
+                for(int i = 0; i < getRowCnt(); i++) {
+                    for(int j = 0; j < getColCnt(); j++) {
+                        if(Math.abs(data[i][j] - mo.data[i][j]) >= 1e-15) {
+                            valuesSame = false;
+                        }
+                    }
+                }
+
+                isEqual = valuesSame;
+            }
+        }
+
+        return isEqual;
+    }
 }
