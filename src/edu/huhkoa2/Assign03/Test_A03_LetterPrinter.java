@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class Test_A03_LetterPrinter {
+public class Test_A03_LetterPrinter { 
 
     private String [] allNames = {
             "Empty Industries",
