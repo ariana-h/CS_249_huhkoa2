@@ -1,4 +1,4 @@
-package edu.realemj.Assign05;
+package edu.huhkoa2.Assign05;
 // NOTE: CHANGE realemj to YOUR SITNETID!!!
 
 import org.testng.Assert;

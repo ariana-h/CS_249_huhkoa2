@@ -1,4 +1,4 @@
-package edu.realemj.Assign05;
+package edu.huhkoa2.Assign05;
 
 import java.util.Scanner;
 
