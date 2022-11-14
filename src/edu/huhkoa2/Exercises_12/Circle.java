@@ -1,6 +1,7 @@
 package edu.huhkoa2.Exercises_12;
 
 import edu.huhkoa2.Exercises_09.Matrix2D;
+import edu.huhkoa2.Exercises_13.InvalidRadiusException;
 
 public class Circle extends Shape {
     private double radius = 1.0;
@@ -9,7 +10,7 @@ public class Circle extends Shape {
         //IMPLICIT: super();
     }
 
-    public Circle(double radius){
+    public Circle(double radius) throws InvalidRadiusException{
         //IMPLICIT: super();
         //this.radius = radius;
         setRadius(radius);
@@ -21,7 +22,7 @@ public class Circle extends Shape {
         super(filled, center);
     }
 
-    public Circle(double radius, boolean filled, Matrix2D center){
+    public Circle(double radius, boolean filled, Matrix2D center) throws InvalidRadiusException{
         super(filled, center);
         //this.radius = radius;
         //this.filled = filled;
@@ -33,9 +34,12 @@ public class Circle extends Shape {
         return radius;
     }
 
-    public void setRadius(double radius){
+    public void setRadius(double radius) throws InvalidRadiusException{
         if(radius >= 0){
             this.radius = radius;
+        }
+        else{
+            throw new InvalidRadiusException("No negative radii: " + radius);
         }
     }
 
