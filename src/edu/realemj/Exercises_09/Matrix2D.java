@@ -96,12 +96,25 @@ public class Matrix2D {
 
         return result;
     }
+
+    public String makePoint3DString() {
+        return data[0][0] + " " + data[1][0] + " " + data[2][0];
+    }
     
     public static Matrix2D makePoint2D(double x, double y) {
         Matrix2D v = new Matrix2D(3, 1);
         v.setValue(0,0,x);
         v.setValue(1,0,y);
         v.setValue(2,0,1);
+        return v;
+    }
+
+    public static Matrix2D makePoint3D(double x, double y, double z) {
+        Matrix2D v = new Matrix2D(4, 1);
+        v.setValue(0,0,x);
+        v.setValue(1,0,y);
+        v.setValue(2, 0, z);
+        v.setValue(3,0,1);
         return v;
     }
 
