@@ -6,11 +6,11 @@ public abstract class Shape {
     protected boolean filled = false;
     private Matrix2D center = Matrix2D.makePoint2D(0,0);
 
-    public Shape(){
+    protected Shape(){
 
     }
 
-    public Shape(boolean filled, Matrix2D center){
+    protected Shape(boolean filled, Matrix2D center){
         this.filled = filled;
         this.center = center;
     }
@@ -44,7 +44,7 @@ public abstract class Shape {
         return s;
     }
 
-    public static String getNameOfShape(){
+    public static String getNameOfShape(){      //underline in UML diagram bc its static
         return "Generic Shape";
     }
 
