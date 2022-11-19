@@ -1,6 +1,6 @@
 package edu.huhkoa2.Assign04;
 
-public class CharImage {
+public class CharImage { 
     private char [][] chars;
     private char fillChar;
     
