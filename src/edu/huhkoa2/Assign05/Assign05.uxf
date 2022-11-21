@@ -1,24 +1,24 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>99</x><y>18</y><w>153</w><h>108</h></coordinates><panel_attributes>Giant
+<diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>160</x><y>0</y><w>144</w><h>96</h></coordinates><panel_attributes>Giant
 -
 -name: String
 -
 +Giant(name: String)
 +getName(): String
-+setName(): String
-+toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>27</x><y>189</y><w>117</w><h>81</h></coordinates><panel_attributes>Troll
++setName(name: String): void
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>152</y><w>104</w><h>72</h></coordinates><panel_attributes>Troll
 -
 +Troll(name: String)
-+toString: String
-+cook(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>81</x><y>117</y><w>72</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>61;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>189</x><y>189</y><w>117</w><h>81</h></coordinates><panel_attributes>Tree
++toString(): String
++cook(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>88</y><w>64</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>61;10;60;130;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>288</x><y>136</y><w>104</w><h>72</h></coordinates><panel_attributes>Tree
 -
 +Tree(name: String)
-+toString: String
-+speak: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>207</x><y>117</y><w>72</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>11;10;60;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>117</x><y>333</y><w>117</w><h>72</h></coordinates><panel_attributes>Ent
++toString(): String
++speak(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>88</y><w>64</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>11;10;10;110;60;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>224</x><y>264</y><w>104</w><h>64</h></coordinates><panel_attributes>Ent
 -
 +Ent(name: String)
-+toString: String
-+speak: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>162</x><y>261</y><w>81</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>71;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>261</x><y>333</y><w>117</w><h>72</h></coordinates><panel_attributes>Huorn
++toString(): String
++speak(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>200</y><w>72</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>71;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>264</y><w>112</w><h>64</h></coordinates><panel_attributes>Huorn
 -
 +Huorn(name: String)
-+toString: String
-+speak: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>261</y><w>81</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>11;10;70;80</additional_attributes></element></diagram>
++toString(): String
++speak(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>200</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>11;10;80;80</additional_attributes></element></diagram>
