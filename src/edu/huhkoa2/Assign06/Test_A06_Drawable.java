@@ -1,5 +1,5 @@
-package edu.realemj.Assign06;
-import edu.realemj.Assign04.CharImage;
+package edu.huhkoa2.Assign06;
+import edu.huhkoa2.Assign04.CharImage;
 //NOTE: CHANGE realemj to YOUR SITNETID!!!
 import org.testng.annotations.Test;
 
