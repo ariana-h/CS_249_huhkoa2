@@ -1,4 +1,4 @@
-package edu.huhkoa2.Assign05;
+package edu.huhkoa2.Assign05; 
 
 public class Troll extends Giant{
     public Troll(String name){
