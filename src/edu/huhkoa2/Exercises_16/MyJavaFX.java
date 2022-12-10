@@ -30,13 +30,11 @@ public class MyJavaFX extends javafx.application.Application{
             allButtons[i] = new Button(""+i);
         }
 
-        /*
-        FlowPane pane = new FlowPane();
+        /*FlowPane pane = new FlowPane();
 
         for(Button b: allButtons){
             pane.getChildren().add(b);
-        }
-        */
+        }*/
 
         GridPane pane = new GridPane();
         pane.add(allButtons[0], 0, 0);
@@ -45,19 +43,39 @@ public class MyJavaFX extends javafx.application.Application{
         pane.add(allButtons[3], 2, 2);
         pane.add(allButtons[4], 1, 1);
 
-        ButtonResponder br = new ButtonResponder();
+        //regular inner class
+        //ButtonResponder br = new ButtonResponder();
+
+        //anonymous inner class
+        /*EventHandler<ActionEvent> br = new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent event){
+                Object obj = event.getSource();
+                if(obj instanceof Button b){
+                    String t = b.getText();
+                    System.out.println("BUTTON: " + t);
+                }
+            }
+        };*/
+
+        EventHandler<ActionEvent> br = event -> {
+            Object obj = event.getSource();
+            if(obj instanceof Button b){
+                String t = b.getText();
+                System.out.println("BUTTON: " + t);
+            }
+        };
+
+
         for(Button b: allButtons){
             b.setOnAction(br);
         }
 
-        /*
-        BorderPane pane = new BorderPane();
+        /*BorderPane pane = new BorderPane();
         pane.setTop(allButtons[0]);
         pane.setBottom(allButtons[1]);
         pane.setLeft(allButtons[2]);
         pane.setRight(allButtons[3]);
-        pane.setCenter(allButtons[4]);
-        */
+        pane.setCenter(allButtons[4]);*/
 
         //Button btOK = new Button("OK");
         //Scene scene = new Scene(btOK, 400, 500);
@@ -75,8 +93,7 @@ public class MyJavaFX extends javafx.application.Application{
 
 }
 
-/*
-class ButtonResponder implements EventHandler<ActionEvent>{
+/*class ButtonResponder implements EventHandler<ActionEvent>{
     public void handle(ActionEvent event){
         Object obj = event.getSource();
         if(obj instanceof Button b){
@@ -85,5 +102,4 @@ class ButtonResponder implements EventHandler<ActionEvent>{
         }
     }
 
-}
-*/
+}*/
