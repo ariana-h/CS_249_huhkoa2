@@ -1,4 +1,4 @@
-package edu.huhkoa2.Assign06;
+package edu.huhkoa2.Assign06; 
 
 import edu.huhkoa2.Assign04.CharImage;
 
